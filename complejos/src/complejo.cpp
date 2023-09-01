@@ -24,3 +24,7 @@ int complejo::get_imaginario()
 {
     return imaginario;
 }
+
+int* complejo::get(){
+return a;
+}
