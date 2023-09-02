@@ -1,6 +1,8 @@
 #ifndef COMPLEJO_H
 #define COMPLEJO_H
 
+#include <iostream>
+using namespace std;
 
 class complejo
 {
@@ -12,6 +14,14 @@ class complejo
         int get_real();
         int get_imaginario();
         int* get();
+
+        //friend ostream& operator << (ostream&, complejo&);
+        friend ostream& operator << (ostream&, complejo&);
+        complejo& operator + (complejo&);
+        ///complejo operator + (complejo&, complejo&);
+        complejo operator - (complejo&);
+        int operator + (int&);
+
 
     protected:
 

@@ -28,3 +28,48 @@ int complejo::get_imaginario()
 int* complejo::get(){
 return a;
 }
+
+
+/*
+ostream& operator<< (ostream& os, complejo &com)
+{
+
+    os << showpos << com.get_real() << " ";
+    os << showpos <<com.get_imaginario() << " j" <<endl;
+
+    return os;
+}*/
+
+ostream& operator<< (ostream& os ,complejo &com)
+{
+
+    cout << showpos << com.get_real() << " ";
+    cout << showpos <<com.get_imaginario() << " j" <<endl;
+
+    return os;
+}
+
+
+
+complejo& complejo::operator + (complejo &a)
+{
+
+    complejo &c3 = *this;
+
+    c3.real = real + a.get_real();
+    c3.imaginario = imaginario + a.get_imaginario();
+
+    return c3;
+}
+
+/*
+complejo complejo::operator + (const complejo& a, const complejo& b) {
+    complejo resultado;
+    resultado.set_real(a.get_real() + b.get_real());
+    resultado.set_imaginario(a.get_imaginario() + b.get_imaginario());
+    return resultado;
+}*/
+int operator + (complejo&){
+    this
+
+}
