@@ -69,7 +69,10 @@ complejo complejo::operator + (const complejo& a, const complejo& b) {
     resultado.set_imaginario(a.get_imaginario() + b.get_imaginario());
     return resultado;
 }*/
-int operator + (complejo&){
-    this
+complejo operator + (complejo& a){
 
+    complejo resultado;
+    resultado.set_real(a.get_real() + *this);
+    resultado.set_imaginario(a.get_imaginario());
+    return resultado;
 }
