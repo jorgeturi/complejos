@@ -1,11 +1,11 @@
 # depslib dependency file v1.0
-1693692115 source:c:\users\jorge\documents\github\complejos\complejos\main.cpp
+1693756971 source:c:\users\jorge\documents\github\complejos\complejos\main.cpp
 	<iostream>
 	"complejo.h"
 
-1693692279 source:c:\users\jorge\documents\github\complejos\complejos\src\complejo.cpp
+1693756810 source:c:\users\jorge\documents\github\complejos\complejos\src\complejo.cpp
 	"complejo.h"
 
-1693692388 c:\users\jorge\documents\github\complejos\complejos\include\complejo.h
+1693756468 c:\users\jorge\documents\github\complejos\complejos\include\complejo.h
 	<iostream>
 

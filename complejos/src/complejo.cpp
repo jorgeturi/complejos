@@ -51,13 +51,15 @@ ostream& operator<< (ostream& os ,complejo &com)
 
 
 
+
+
 complejo& complejo::operator + (complejo &a)
 {
 
     complejo &c3 = *this;
 
-    c3.real = real + a.get_real();
-    c3.imaginario = imaginario + a.get_imaginario();
+    c3.real = this->real + a.get_real();
+    c3.imaginario = (this)->imaginario + a.get_imaginario();
 
     return c3;
 }
@@ -69,10 +71,12 @@ complejo complejo::operator + (const complejo& a, const complejo& b) {
     resultado.set_imaginario(a.get_imaginario() + b.get_imaginario());
     return resultado;
 }*/
-complejo operator + (complejo& a){
+
+/*
+complejo complejo::operator + (complejo& a){
 
     complejo resultado;
-    resultado.set_real(a.get_real() + *this);
+    resultado.set_real(a.get_real() + (*this)->
     resultado.set_imaginario(a.get_imaginario());
     return resultado;
-}
+}*/
