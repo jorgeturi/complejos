@@ -43,8 +43,8 @@ ostream& operator<< (ostream& os, complejo &com)
 ostream& operator<< (ostream& os ,complejo &com)
 {
 
-    cout << showpos << com.get_real() << " ";
-    cout << showpos <<com.get_imaginario() << " j" <<endl;
+    os << showpos << com.get_real() << " ";
+    os << showpos <<com.get_imaginario() << " j" <<endl;
 
     return os;
 }
@@ -72,11 +72,9 @@ complejo complejo::operator + (const complejo& a, const complejo& b) {
     return resultado;
 }*/
 
-/*
-complejo complejo::operator + (complejo& a){
 
-    complejo resultado;
-    resultado.set_real(a.get_real() + (*this)->
-    resultado.set_imaginario(a.get_imaginario());
-    return resultado;
-}*/
+int operator + (int b, complejo a){
+
+    return b+a.get_real();
+
+}

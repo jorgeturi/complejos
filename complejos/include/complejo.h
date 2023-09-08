@@ -15,12 +15,12 @@ class complejo
         int get_imaginario();
         int* get();
 
-        //friend ostream& operator << (ostream&, complejo&);
-        ostream& operator << (complejo&);
+        friend ostream& operator << (ostream&, complejo&);
+        //ostream& operator << (complejo&);
         complejo& operator + (complejo&);
         ///complejo operator + (complejo&, complejo&);
         complejo operator - (complejo&);
-        int operator + (int&);
+        friend int operator + (int, complejo);
         complejo complejo_suma();
 
     protected:
