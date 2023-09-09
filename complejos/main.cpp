@@ -33,8 +33,6 @@ int main()
 
     cout << un_complejo.get_imaginario()<< endl;
 
-    cout << un_complejo.get()<< endl;
-
     cout << "Hello world!" << endl;
 
     complejo c2;

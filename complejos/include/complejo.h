@@ -11,7 +11,7 @@ class complejo
 
         void set_real(int);
         void set_imaginario(int);
-        int get_real();
+        int get_real() const;
         int get_imaginario();
         int* get();
 
@@ -20,15 +20,15 @@ class complejo
         complejo& operator + (complejo&);
         ///complejo operator + (complejo&, complejo&);
         complejo operator - (complejo&);
-        friend int operator + (int, complejo);
+        friend int operator + (int, const complejo&);
         complejo complejo_suma();
 
     protected:
 
     private:
-        int real;
-        int imaginario;
-        int * a;
+        int* real;
+        int* imaginario;
+
 
 };
 

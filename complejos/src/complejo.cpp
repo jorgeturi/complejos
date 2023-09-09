@@ -2,32 +2,30 @@
 
 complejo::complejo()
 {
-    //ctor
+    real = new int;
+    imaginario = new int;
 }
 
 void complejo::set_real(int n)
 {
-    real = n;
+    *real = n;
 }
 
 void complejo :: set_imaginario(int i)
 {
-    imaginario = i;
+    *imaginario = i;
 }
 
-int complejo::get_real()
+int complejo::get_real() const ///ESTO POR QUE LO PIDE LA CARGA DEL OP INT + COMPLEJO?
 {
-    return real;
+    return *real;
 }
 
 int complejo::get_imaginario()
 {
-    return imaginario;
+    return *imaginario;
 }
 
-int* complejo::get(){
-return a;
-}
 
 
 /*
@@ -73,7 +71,7 @@ complejo complejo::operator + (const complejo& a, const complejo& b) {
 }*/
 
 
-int operator + (int b, complejo a){
+int operator + (int b, const complejo& a){
 
     return b+a.get_real();
 
