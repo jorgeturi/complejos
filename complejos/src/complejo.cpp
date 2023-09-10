@@ -21,7 +21,7 @@ int complejo::get_real() const ///ESTO POR QUE LO PIDE LA CARGA DEL OP INT + COM
     return *real;
 }
 
-int complejo::get_imaginario()
+int complejo::get_imaginario() const
 {
     return *imaginario;
 }
@@ -56,19 +56,27 @@ complejo& complejo::operator + (complejo &a)
 
     complejo &c3 = *this;
 
-    c3.real = this->real + a.get_real();
-    c3.imaginario = (this)->imaginario + a.get_imaginario();
+    c3.set_real(*this->real + a.get_real());
+    c3.set_imaginario( *this->imaginario + a.get_imaginario());
 
     return c3;
 }
 
-/*
-complejo complejo::operator + (const complejo& a, const complejo& b) {
-    complejo resultado;
-    resultado.set_real(a.get_real() + b.get_real());
-    resultado.set_imaginario(a.get_imaginario() + b.get_imaginario());
+
+complejo complejo::operator * (const complejo& a) {
+    complejo& resultado = *this;
+    resultado.set_real(a.get_real() + *this->real);
+    resultado.set_imaginario(a.get_imaginario() + 20);
     return resultado;
-}*/
+}
+
+int complejo::operator * ( complejo& a) {
+    int resultado = 0;
+    complejo& invocador = *this;
+    resultado = invocador.get_real() + invocador.get_imaginario() + a.get_real() + a.get_imaginario();
+
+    return resultado;
+}
 
 
 int operator + (int b, const complejo& a){
@@ -76,3 +84,10 @@ int operator + (int b, const complejo& a){
     return b+a.get_real();
 
 }
+
+
+int complejo::operator(int)(complejo &a){
+    return a.get_real();
+
+}
+

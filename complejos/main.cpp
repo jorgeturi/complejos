@@ -41,7 +41,13 @@ int main()
     c2 = un_complejo + un_complejo;
 
     ///como le digo que 1 + c2 = quedarme con el modulo?
-    cout << un_complejo << 1 + c2 <<endl;
+    cout << un_complejo << endl << c2 <<endl<<1 + c2 <<endl;
+
+    complejo c3;
+    int o =static_cast<int> c2 * c2;
+    cout << o << endl;
+    complejo c4 = c2 * c2;
+    cout << c4 << endl;
 
     return 0;
 }
