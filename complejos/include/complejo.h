@@ -28,9 +28,11 @@ class complejo
         complejo operator * (const complejo&);
         ///int operator * (const complejo&);
 
+        complejo operaciones(const complejo&, complejo) const;
+        complejo operaciones1(const complejo, complejo);
 
-        int operator (int)(complejo &);
-
+       /// int operator (int)(complejo &);
+    /// tira error
 
     protected:
 

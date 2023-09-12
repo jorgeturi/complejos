@@ -64,12 +64,14 @@ complejo& complejo::operator + (complejo &a)
 
 
 complejo complejo::operator * (const complejo& a) {
-    complejo& resultado = *this;
+    complejo resultado = *this;
     resultado.set_real(a.get_real() + *this->real);
     resultado.set_imaginario(a.get_imaginario() + 20);
     return resultado;
 }
 
+///PRUEBA sobrecargar operador y devolver otro tipo de dato
+/*
 int complejo::operator * ( complejo& a) {
     int resultado = 0;
     complejo& invocador = *this;
@@ -77,7 +79,7 @@ int complejo::operator * ( complejo& a) {
 
     return resultado;
 }
-
+*/
 
 int operator + (int b, const complejo& a){
 
@@ -86,8 +88,46 @@ int operator + (int b, const complejo& a){
 }
 
 
+/*
 int complejo::operator(int)(complejo &a){
     return a.get_real();
 
-}
+}*/
 
+
+complejo complejo::operaciones(const complejo& c1, complejo c2) const{
+    complejo a;
+    complejo b = c1;
+    cout << "adentro de la f c1:" << b;
+    b.set_imaginario(0);
+
+
+    b.imaginario = new int; /// todo esto no se hace, pero xq me permite?
+    int *p = new int;
+    *p = 4;
+    b.imaginario = p; ///
+    //b->imaginario = 6; ///????
+
+    c2.set_imaginario(80);
+    a.set_real(-15);
+    //this->set_real(22); ESTO ES LO QUE NO ME PERMITE CONST CUAL?
+
+
+    return a;
+
+}
+        complejo complejo::operaciones1(const complejo c1, complejo c2){
+            complejo a;
+
+        complejo b = c1;
+        cout << "adentro de la f c1 operaciones1:" << b;
+        b.set_imaginario(60);
+
+        c2.set_imaginario(60);
+
+        this->set_real(22);
+
+
+            return a;
+
+        }
