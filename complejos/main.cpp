@@ -1,4 +1,4 @@
-#include <iostream>
+
 #include "complejo.h"
 
 using namespace std;
@@ -23,7 +23,8 @@ int main()
     b = b +1;
     cout<< b<< "y a: " << a << endl << b+1 <<  "  " << a << endl;
 
-    complejo un_complejo;
+    complejo un_complejo(9);
+    cout << "un compl"<<un_complejo << endl;
 
     un_complejo.set_imaginario(25);
 

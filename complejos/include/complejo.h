@@ -8,6 +8,8 @@ class complejo
 {
     public:
         complejo();
+        complejo(int, int=8);
+        //complejo(int);
 
         void set_real(int);
         void set_imaginario(int);

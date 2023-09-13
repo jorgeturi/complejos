@@ -2,8 +2,14 @@
 
 complejo::complejo()
 {
-    real = new int;
-    imaginario = new int;
+    real = new int(5);
+    imaginario = new int(0);
+}
+
+complejo::complejo(int real1, int img)
+{
+    real = new int(real1);
+    imaginario = new int(img);
 }
 
 void complejo::set_real(int n)
@@ -102,7 +108,7 @@ complejo complejo::operaciones(const complejo& c1, complejo c2) const{
     b.set_imaginario(0);
 
 
-    b.imaginario = new int; /// todo esto no se hace, pero xq me permite?
+    b.imaginario = new int; ///
     int *p = new int;
     *p = 4;
     b.imaginario = p; ///
